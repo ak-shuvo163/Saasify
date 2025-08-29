@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourProductName | Affordable SaaS Solutions for Startups</title>
+    <meta name="description" content="YourProductName provides seamless cloud software to boost your business productivity. Try it free for 14 days." />
+    
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="YourProductName | Affordable SaaS Solutions for Startups" />
+    <meta property="og:description" content="Boost your business productivity with our cloud SaaS platform. Try it free now!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourproductname.com" />
+    <meta property="og:image" content="https://yourproductname.com/og-image.jpg" />
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YourProductName | Affordable SaaS Solutions for Startups" />
+    <meta name="twitter:description" content="Boost your business productivity with our cloud SaaS platform. Try it free now!" />
+    <meta name="twitter:image" content="https://yourproductname.com/twitter-image.jpg" />
+    
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+       <!-- Pricing Card (Reusable Style) -->
+       <style>
+        .pricing-card {
+          position: relative;
+          border-radius: 1rem;
+          overflow: hidden;
+          background: var(--tw-prose-body);
+          transform: scale(1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+          transform: scale(1.05);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .pricing-card::before {
+          pointer-events: none;
+          content: "";
+          position: absolute;
+          inset: 0;
+          padding: 2px;
+          border-radius: inherit;
+          background: linear-gradient(270deg, #3b82f6, #06b6d4, #8b5cf6);
+          background-size: 600% 600%;
+          animation: borderGradient 6s ease infinite;
+          -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+                  mask-composite: exclude;
+        }
+        @keyframes borderGradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+         /* Hide scrollbar for all browsers */
+         #carousel::-webkit-scrollbar {
+          display: none;
+        }
+        #carousel {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      </style>
+
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans leading-relaxed">
+     <!-- Navbar -->
+     <nav
+     class="w-full px-4 py-3 flex justify-between items-center shadow-md bg-white/80 dark:bg-gray-700/80 backdrop:blur transition duration-300 fixed top-0 left-0 z-50">
+
+     <!--logo-->
+     <div class="flex items-center gap-2">
+         <img src="assets/images/download (36).webp" alt="Logo" class="w-10 h-10 rounded-full border-2 border-pink-500">
+         <span class="font-bold text-xl tracking-tight">SaaSify</span>
+     </div>
+     <ul class="hidden md:flex gap-8 font-semibold">
+         <li><a href="#features" class="nav-link hover:text-pink-500 transition">Features</a></li>
+         <li><a href="#pricing" class="nav-link hover:text-pink-500 transition">Pricing</a></li>
+         <li><a href="#use-cases" class="nav-link hover:text-pink-500 transition">Use Cases</a></li>
+         <li><a href="#faq" class="nav-link hover:text-pink-500 transition">FAQ</a></li>
+         <li><a href="#testimonials" class="nav-link hover:text-pink-500 transition">Testimonials</a></li>
+     </ul>
+     <div class="flex items-center gap-4">
+         <button id="theme-toggle" class="text-2xl focus:outline-none" aria-label="Toggle dark mode">
+             <i class="fa-solid fa-moon"></i>
+         </button>
+         <a href="#pricing" class=" md:inline-block bg-pink-600 font-semibold px-4 py-2 rounded hover:bg-pink-700 transition text-white">
+            Get Started
+          </a>
+         <button class="md:hidden text-2xl" id="mobile-menu-btn" aria-label="open mobile-menu"><i class="fa-solid fa-bars"></i></button>
+     </div>
+ </nav>
+     <!-- Mobile Menu -->
+     <div id="mobile-menu"
+         class="fixed top-0 right-[-100%] w-64 h-full bg-white dark:bg-gray-900 shadow-lg flex flex-col items-start gap-6 px-6 py-10 text-lg transition-all duration-300 ease-in-out z-50">
+         <button id="close-menu" class="absolute top-4 right-4 text-2xl" aria-label="close Menu">
+             <i class="fa-solid fa-xmark"></i>
+           </button>
+         <a href="#features" class="block hover:text-pink-500 transition">Features</a>
+         <a href="#pricing" class="block hover:text-pink-500 transition">Pricing</a>
+         <a href="#use-cases" class="block hover:text-pink-500 transition">Use Cases</a>
+         <a href="#faq" class="block hover:text-pink-500 transition">FAQ</a>
+         <a href="#testimonials" class="block hover:text-pink-500 transition">Testimonials</a>
+     </div>
+
+     <!-- 🚀 Hero Section Start -->
+<header class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <!-- Background Images -->
+    <img
+      src="assets/images/light-bg-image.webp"
+      alt="Hero Background Light"
+      class="absolute inset-0 w-full h-full object-cover z-0 dark:hidden"
+    />
+    <img
+      src="assets/images/dark-bg-image.webp"
+      alt="Hero Background Dark"
+      class="absolute inset-0 w-full h-full object-cover z-0 hidden dark:block"
+    />
+  
+    <!-- Overlay for readability -->
+    <div class="absolute inset-0 bg-white/70 dark:bg-black/70 z-0"></div>
+  
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-gray-900 dark:text-white">
+        Supercharge Your Startup with <span class="text-blue-600">SaaSify</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-6 text-gray-700 dark:text-gray-300">
+        The simplest way to manage <strong>[Problem]</strong> — all in one place.
+      </p>
+  
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#pricing" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+          Get Started for $10
+        </a>
+  
+        <a href="#features" class="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M8 9a3 3 0 116 0 3 3 0 01-6 0z" />
+            <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0A8 8 0 012 10zm8-5a5 5 0 100 10A5 5 0 0010 5z" clip-rule="evenodd" />
+          </svg>
+          Get Started for Free
+        </a>
+      </div>
+    </div>
+  </header>
+  
+
+      <!-- 🧩 Problem → Solution Section Start -->
+      <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Facing These Challenges?</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+            Startups often struggle with scattered tools, manual work, and lack of visibility. That’s where we come in.
+          </p>
+      
+          <div class="grid md:grid-cols-3 gap-8 text-left">
+            <!-- Problem 1 -->
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 duration-300 ease-in-out">
+              <div class="mb-4">
+                <!-- Icon example -->
+                <svg class="w-10 h-10 text-pink-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">⚠️ Too Many Tools</h3>
+              <p class="text-gray-600 dark:text-gray-300">Using 5+ apps just to manage one workflow? It's wasting your time and energy.</p>
+            </div>
+      
+            <!-- Problem 2 -->
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 duration-300 ease-in-out">
+              <div class="mb-4">
+                <svg class="w-10 h-10 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v4l3 3" /></svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">⏳ Manual Processes</h3>
+              <p class="text-gray-600 dark:text-gray-300">Still doing things manually that can be automated in seconds?</p>
+            </div>
+      
+            <!-- Problem 3 -->
+            <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:scale-105 duration-300 ease-in-out">
+              <div class="mb-4">
+                <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">📉 Lack of Insights</h3>
+              <p class="text-gray-600 dark:text-gray-300">You can’t grow what you can’t measure. No analytics, no progress.</p>
+            </div>
+          </div>
+      
+          <!-- ✅ Solution Summary -->
+          <div class="mt-16 max-w-xl mx-auto">
+            <h3 class="text-2xl font-bold mb-4">✅ Our SaaS is the Solution.</h3>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              With <strong>[Your SaaS Name]</strong>, unify your tools, automate the boring stuff, and get <em>crystal clear insights</em> to grow faster.
+            </p>
+            <a href="#pricing" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+              See Pricing Plans →
+            </a>
+          </div>
+        </div>
+      </section>
+  <!-- 🧩 Problem → Solution Section End -->
+
+  <!-- ⚙️ Features Section Start -->
+  
+<section id="features" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Powerful Features to Boost Your Workflow</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+        Everything you need to simplify, automate, and grow — all in one platform.
+      </p>
+  
+      <div class="grid gap-10 md:grid-cols-3 text-left">
+        
+        
+        <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow hover:shadow-lg transition">
+          <div class="text-blue-600 text-4xl mb-4">
+            🔄
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Automated Workflows</h3>
+          <p class="text-gray-600 dark:text-gray-300">Set it once, and let our system handle the repetitive tasks for you.</p>
+        </div>
+  
+        
+        <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow hover:shadow-lg transition">
+          <div class="text-green-600 text-4xl mb-4">
+            📊
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Real-Time Analytics</h3>
+          <p class="text-gray-600 dark:text-gray-300">Track performance with crystal-clear dashboards & charts.</p>
+        </div>
+  
+        
+        <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow hover:shadow-lg transition">
+          <div class="text-purple-600 text-4xl mb-4">
+            🌐
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Team Collaboration</h3>
+          <p class="text-gray-600 dark:text-gray-300">Work together in real-time, share feedback, and move faster.</p>
+        </div>
+  
+        
+        <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow hover:shadow-lg transition">
+          <div class="text-red-600 text-4xl mb-4">
+            🔐
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Secure & Private</h3>
+          <p class="text-gray-600 dark:text-gray-300">We use industry-standard encryption to keep your data safe.</p>
+        </div>
+  
+        
+        <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow hover:shadow-lg transition">
+          <div class="text-yellow-600 text-4xl mb-4">
+            ⚡
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
+          <p class="text-gray-600 dark:text-gray-300">Optimized for speed so your team stays in flow — always.</p>
+        </div>
+  
+        
+        <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow hover:shadow-lg transition">
+          <div class="text-indigo-600 text-4xl mb-4">
+            🛠️
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Easy Customization</h3>
+          <p class="text-gray-600 dark:text-gray-300">Tweak everything to match your brand and workflow needs.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- ⚙️ Features Section End -->
+
+  <!-- 💼 Use Case Section Start -->
+<section id="use-cases" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Built for Startups Like Yours</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+        Whether you're building an MVP or scaling your product, [Your SaaS Name] fits perfectly at every stage.
+      </p>
+  
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        
+        <!-- Use Case 1 -->
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">🚀 Launching an MVP</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Quickly build, test, and validate your idea with ready-to-go tools that eliminate setup time.
+          </p>
+        </div>
+  
+        <!-- Use Case 2 -->
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">👥 Remote Teams</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Collaborate in real-time, track progress, and stay aligned across time zones.
+          </p>
+        </div>
+  
+        <!-- Use Case 3 -->
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">📈 Growth & Scaling</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Automate processes, gain insights, and grow without needing to hire extra staff.
+          </p>
+        </div>
+  
+      </div>
+  
+      <!-- CTA under Use Case -->
+      <div class="mt-12">
+        <a href="#pricing" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          See Pricing Plans →
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- 💼 Use Case Section End -->
+
+<!-- 💰 Pricing Section Start -->
+<section id="pricing" class="py-28 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">
+      Simple & Transparent Pricing
+    </h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">
+      No hidden fees. Pay once. Use forever.
+    </p>
+
+    <!-- Toggle Monthly / Annual -->
+    <div class="flex justify-center items-center mb-16">
+      <span class="mr-4 text-gray-500 dark:text-gray-300 font-medium">Monthly</span>
+      <div class="relative">
+        <input type="checkbox" id="pricing-toggle" class="sr-only">
+        <label for="pricing-toggle" class="block w-16 h-8 bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer relative transition-colors">
+          <span class="dot absolute left-1 top-1 w-6 h-6 bg-white dark:bg-gray-900 rounded-full transition-transform"></span>
+        </label>
+      </div>
+      <span class="ml-4 text-gray-500 dark:text-gray-300 font-medium">Annual</span>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid gap-8 md:grid-cols-3">
+
+      <!-- Free Plan -->
+      <div class="pricing-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-on-scroll" data-animate="fade-up">
+        <h3 class="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Free Plan</h3>
+        <p class="text-gray-500 dark:text-gray-300 mb-4">Best for individuals exploring the platform.</p>
+        <div class="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+          $0 <span class="text-base font-medium text-gray-400 dark:text-gray-400">forever</span>
+        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            1 Project
+          </li>
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Basic Analytics
+          </li>
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Community Support
+          </li>
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Limited Integrations
+          </li>
+        </ul>
+        <a href="#" class="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-medium">
+          Get Started Free
+        </a>
+      </div>
+
+      <!-- Starter Plan -->
+      <div class="pricing-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-on-scroll hover:scale-[1.02]" data-animate="fade-up" data-delay="100">
+        <h3 class="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Starter Plan</h3>
+        <p class="text-gray-500 dark:text-gray-300 mb-4">Perfect for solo founders and early-stage startups.</p>
+        <div class="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+          <span class="price-monthly">$10</span><span class="price-annual hidden">$100</span>
+          <span class="text-base font-medium text-gray-400 dark:text-gray-400">one-time</span>
+        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            3 Projects
+          </li>
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Basic Analytics & Reports
+          </li>
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Email Support
+          </li>
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Lifetime Access
+          </li>
+          <li class="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+            <svg class="w-6 h-6 text-indigo-500 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Limited Integrations
+          </li>
+        </ul>
+        <a href="#" class="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-medium">
+          Buy Starter
+        </a>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="pricing-card relative p-8 rounded-xl shadow-2xl bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 text-black dark:text-white transform hover:-translate-y-2 hover:scale-[1.03] transition-all animate-on-scroll" data-animate="fade-up" data-delay="200">
+        <div class="absolute top-0 right-0 bg-white dark:bg-gray-900 text-yellow-600 font-bold text-sm px-3 py-1 rounded-bl shadow-md">Most Popular</div>
+        <h3 class="text-2xl font-semibold mb-2">Pro Plan</h3>
+        <p class="mb-4">For growing startups who need power, flexibility & priority support.</p>
+        <div class="text-4xl font-bold mb-6">
+          <span class="price-monthly">$25</span><span class="price-annual hidden">$250</span>
+          <span class="text-base font-medium text-yellow-900 dark:text-yellow-100">one-time</span>
+        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Unlimited Projects
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Advanced Analytics & Reports
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Priority Email Support
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Lifetime Access + Updates
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Unlimited Integrations
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-white dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+            </svg>
+            Dedicated Support
+          </li>
+        </ul>
+        <a href="#" class="block text-center bg-pink-600 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+          Buy Pro
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Compare Table -->
+    <div class="mt-20 overflow-x-auto">
+      <table class="min-w-full bg-white dark:bg-gray-800 rounded-xl shadow-md text-left">
+        <thead class="bg-gray-100 dark:bg-gray-700">
+          <tr>
+            <th class="py-4 px-6 text-gray-700 dark:text-gray-200">Features</th>
+            <th class="py-4 px-6 text-gray-700 dark:text-gray-200">Free</th>
+            <th class="py-4 px-6 text-gray-700 dark:text-gray-200">Starter</th>
+            <th class="py-4 px-6 text-gray-700 dark:text-gray-200">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="py-4 px-6">Projects</td>
+            <td class="py-4 px-6">1</td>
+            <td class="py-4 px-6">3</td>
+            <td class="py-4 px-6">Unlimited</td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
+            <td class="py-4 px-6">Analytics & Reports</td>
+            <td class="py-4 px-6">Basic</td>
+            <td class="py-4 px-6">Basic + Reports</td>
+            <td class="py-4 px-6">Advanced</td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="py-4 px-6">Email Support</td>
+            <td class="py-4 px-6">Community</td>
+            <td class="py-4 px-6">Yes</td>
+            <td class="py-4 px-6">Priority</td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
+            <td class="py-4 px-6">Lifetime Access</td>
+            <td class="py-4 px-6">Limited</td>
+            <td class="py-4 px-6">Yes</td>
+            <td class="py-4 px-6">Yes + Updates</td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700">
+            <td class="py-4 px-6">Integrations</td>
+            <td class="py-4 px-6">Limited</td>
+            <td class="py-4 px-6">Limited</td>
+            <td class="py-4 px-6">Unlimited</td>
+          </tr>
+          <tr class="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
+            <td class="py-4 px-6">Dedicated Support</td>
+            <td class="py-4 px-6">No</td>
+            <td class="py-4 px-6">No</td>
+            <td class="py-4 px-6">Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+<!-- 💰 Pricing Section End -->
+  
+<!-- 3D Testimonials Section Starts -->
+<section id="testimonials" class="py-28 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+  <div class="max-w-7xl mx-auto px-4 text-center relative">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">What Our Users Say</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-16">
+      Trusted by startups, freelancers, and small teams worldwide.
+    </p>
+
+    <!-- Carousel Wrapper -->
+    <div id="carousel" class="relative flex justify-start items-center overflow-hidden px-4 md:px-0">
+      <div class="carousel-track flex transition-transform duration-700 ease-in-out">
+
+        <!-- Testimonial Card 1 -->
+        <div class="testimonial-card flex-shrink-0 mx-4 p-10 rounded-3xl shadow-2xl bg-white dark:bg-gray-900 cursor-pointer w-72 md:w-96">
+          <div class="text-left mb-6 relative">
+            <i class="fas fa-quote-left text-blue-200 text-6xl absolute -top-8 -left-4 opacity-20"></i>
+            <p class="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
+              “This platform revolutionized our workflow. Fast, intuitive, and reliable.”
+            </p>
+          </div>
+          <div class="flex items-center mt-6 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=1" alt="User" class="w-16 h-16 rounded-full border-2 border-blue-500" />
+            <div class="text-left">
+              <h4 class="text-md font-semibold text-gray-900 dark:text-white">Alex Carter</h4>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Founder @ LaunchFlow</span>
+              <img src="https://via.placeholder.com/100x25/F3F4F6/000000?text=Logo" alt="Company Logo" class="mt-1 h-6" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="testimonial-card flex-shrink-0 mx-4 p-10 rounded-3xl shadow-2xl bg-white dark:bg-gray-900 cursor-pointer w-72 md:w-96">
+          <div class="text-left mb-6 relative">
+            <i class="fas fa-quote-left text-blue-200 text-6xl absolute -top-8 -left-4 opacity-20"></i>
+            <p class="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
+              “Automation saved me hours every week managing my team. Incredible experience!”
+            </p>
+          </div>
+          <div class="flex items-center mt-6 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=2" alt="User" class="w-16 h-16 rounded-full border-2 border-blue-500" />
+            <div class="text-left">
+              <h4 class="text-md font-semibold text-gray-900 dark:text-white">Sophie Lee</h4>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Ops Manager @ RemoteStack</span>
+              <img src="https://via.placeholder.com/100x25/F3F4F6/000000?text=Logo" alt="Company Logo" class="mt-1 h-6" />
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial Card 3 -->
+        <div class="testimonial-card flex-shrink-0 mx-4 p-10 rounded-3xl shadow-2xl bg-white dark:bg-gray-900 cursor-pointer w-72 md:w-96">
+          <div class="text-left mb-6 relative">
+            <i class="fas fa-quote-left text-blue-200 text-6xl absolute -top-8 -left-4 opacity-20"></i>
+            <p class="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
+              “Automation saved me hours every week managing my team. Incredible experience!”
+            </p>
+          </div>
+          <div class="flex items-center mt-6 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=2" alt="User" class="w-16 h-16 rounded-full border-2 border-blue-500" />
+            <div class="text-left">
+              <h4 class="text-md font-semibold text-gray-900 dark:text-white">Sophie Lee</h4>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Ops Manager @ RemoteStack</span>
+              <img src="https://via.placeholder.com/100x25/F3F4F6/000000?text=Logo" alt="Company Logo" class="mt-1 h-6" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 4 -->
+        <div class="testimonial-card flex-shrink-0 mx-4 p-10 rounded-3xl shadow-2xl bg-white dark:bg-gray-900 cursor-pointer w-72 md:w-96">
+          <div class="text-left mb-6 relative">
+            <i class="fas fa-quote-left text-blue-200 text-6xl absolute -top-8 -left-4 opacity-20"></i>
+            <p class="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
+              “$25 for lifetime access? That’s a steal. Replaced 3 tools with this one platform.”
+            </p>
+          </div>
+          <div class="flex items-center mt-6 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=3" alt="User" class="w-16 h-16 rounded-full border-2 border-blue-500" />
+            <div class="text-left">
+              <h4 class="text-md font-semibold text-gray-900 dark:text-white">Michael Zhang</h4>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Co-founder @ ScaleHub</span>
+              <img src="https://via.placeholder.com/100x25/F3F4F6/000000?text=Logo" alt="Company Logo" class="mt-1 h-6" />
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial Card 5 -->
+        <div class="testimonial-card flex-shrink-0 mx-4 p-10 rounded-3xl shadow-2xl bg-white dark:bg-gray-900 cursor-pointer w-72 md:w-96">
+          <div class="text-left mb-6 relative">
+            <i class="fas fa-quote-left text-blue-200 text-6xl absolute -top-8 -left-4 opacity-20"></i>
+            <p class="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
+              “$25 for lifetime access? That’s a steal. Replaced 3 tools with this one platform.”
+            </p>
+          </div>
+          <div class="flex items-center mt-6 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=3" alt="User" class="w-16 h-16 rounded-full border-2 border-blue-500" />
+            <div class="text-left">
+              <h4 class="text-md font-semibold text-gray-900 dark:text-white">Michael Zhang</h4>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Co-founder @ ScaleHub</span>
+              <img src="https://via.placeholder.com/100x25/F3F4F6/000000?text=Logo" alt="Company Logo" class="mt-1 h-6" />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button id="prevBtn" aria-label="Previous testimonial" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-900 rounded-full p-3 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition z-20">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button id="nextBtn" aria-label="Next testimonial" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-900 rounded-full p-3 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition z-20">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Pagination Dots -->
+    <div id="carousel-dots" class="flex justify-center space-x-2 mt-10"></div>
+
+  </div>
+</section>
+<!-- 3D Testimonials Section Ends -->
+
+
+
+<!-- ✅ FAQ Section Start -->
+<section id="faq" class="py-20 bg-white dark:bg-gray-900">
+  <div class="max-w-4xl mx-auto px-6">
+    <!-- Title -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      ❓ Frequently Asked Questions
+    </h2>
+
+    <div class="space-y-4">
+      <!-- Item 1 -->
+      <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+          <span class="text-lg font-semibold">💳 Is this a one-time payment or a subscription?</span>
+          <span class="faq-icon text-2xl">➕</span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+          <p class="pb-4 text-gray-600 dark:text-gray-300">
+            It's a one-time payment. Pay once and use the product forever — no monthly fees!
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+          <span class="text-lg font-semibold">🧑 Can I upgrade from the $10 plan to the $25 plan later?</span>
+          <span class="faq-icon text-2xl">➕</span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+          <p class="pb-4 text-gray-600 dark:text-gray-300">
+            Yes! You can upgrade at any time by just paying the price difference.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+          <span class="text-lg font-semibold">🔐 Is my data secure?</span>
+          <span class="faq-icon text-2xl">➕</span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+          <p class="pb-4 text-gray-600 dark:text-gray-300">
+            Absolutely. We use end-to-end encryption and follow industry best practices to keep your data safe.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+          <span class="text-lg font-semibold">📞 Do you offer support?</span>
+          <span class="faq-icon text-2xl">➕</span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6">
+          <p class="pb-4 text-gray-600 dark:text-gray-300">
+            Yes, we offer email support for all users. Pro users get priority support within 24 hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ✅ FAQ Section End -->
+
+
+  
+  <!-- 🚀 Final CTA Banner Section Start -->
+  <section id="#" class="py-16   bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100 text-gray-900 
+  dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-gray-100">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Boost Your Startup?</h2>
+      <p class="text-lg mb-4">Save time, grow faster, and focus on what matters most.</p>
+      <p class="mb-6 opacity-90">Start using [Your SaaS Name] today and simplify your workflow with powerful automation.</p>
+      <a href="#pricing"
+         class="cursor-pointer inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-100 transition">
+        Unlock Lifetime Access — Only $10 →
+      </a>
+      <p class="mt-3 text-sm opacity-80">No credit card required. 30-day money-back guarantee.</p>
+    </div>
+  </section>
+  
+  <!-- 🚀 Final CTA Banner Section End -->
+  
+  
+  
+     <footer class="bg-gray-200 dark:bg-gray-800 text-center text-sm text-gray-600 dark:text-gray-400 py-6 mt-12">  
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+            <!-- Brand Info -->
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">SaaSify</h3>
+              <p class="text-sm">Empowering startups with smarter tools, automation, and growth strategies.</p>
+            </div>
+        
+            <!-- Useful Links -->
+            <div>
+              <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+              <ul class="space-y-2">
+                <li><a href="#features" class="hover:underline">Features</a></li>
+                <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+                <li><a href="#faq" class="hover:underline">FAQ</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+              </ul>
+            </div>
+        
+            <!-- Social Media & Contact -->
+            <div>
+              <h4 class="text-lg font-semibold mb-3">Connect</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="hover:underline">Facebook</a></li>
+                <li><a href="#" class="hover:underline">Twitter</a></li>
+                <li><a href="#" class="hover:underline">LinkedIn</a></li>
+                <li><a href="mailto:support@saasify.com" class="hover:underline">support@saasify.com</a></li>
+              </ul>
+            </div>
+        
+          </div>
+        
+        <div class="text-center md:text-left p-6">
+            <p id="live-time" class="mb-2 text-xs text-gray-500 dark:text-gray-400"></p>
+        <p>&copy; <span id="current-year"></span> 2025 SaaSify. All rights reserved.</p>
+        </div>
+      </footer>
+
+
+      <script>
+        
+    document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const cards = Array.from(track.children);
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const dotsContainer = document.getElementById("carousel-dots");
+
+  let currentIndex = 0;
+  let isDragging = false;
+  let startX = 0;
+
+  // Create Dots
+  cards.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.classList.add("w-3","h-3","rounded-full","bg-gray-400","dark:bg-gray-600","focus:outline-none","transition");
+    if(index===0) dot.classList.add("bg-blue-500");
+    dotsContainer.appendChild(dot);
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  const dots = Array.from(dotsContainer.children);
+
+  function updateCarousel() {
+    const cardWidth = cards[0].offsetWidth + 32;
+    const offset = -currentIndex * cardWidth; // left-aligned active card
+    track.style.transform = `translateX(${offset}px)`;
+
+    // 3D rotation effect
+    cards.forEach((card, index) => {
+      const diff = index - currentIndex;
+      card.style.transform = `
+        perspective(1000px)
+        rotateY(${diff * 15}deg)
+        translateX(${diff * 20}px)
+        scale(${index===currentIndex ? 1 : 0.85})
+      `;
+      card.style.opacity = index===currentIndex ? 1 : 0.5;
+      card.style.zIndex = index===currentIndex ? 10 : 1;
+    });
+
+    // Update Dots
+    dots.forEach((dot,index)=>{
+      dot.classList.remove("bg-blue-500");
+      dot.classList.add("bg-gray-400","dark:bg-gray-600");
+      if(index===currentIndex){
+        dot.classList.remove("bg-gray-400","dark:bg-gray-600");
+        dot.classList.add("bg-blue-500");
+      }
+    });
+  }
+
+  // Next / Prev Buttons
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex+1)%cards.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex-1+cards.length)%cards.length;
+    updateCarousel();
+  });
+
+  // Auto Slide
+  setInterval(() => {
+    currentIndex = (currentIndex+1)%cards.length;
+    updateCarousel();
+  }, 5000);
+
+  // Swipe/Drag Support
+  track.addEventListener("pointerdown", e => {
+    isDragging = true;
+    startX = e.clientX;
+    track.style.transition = "none";
+  });
+
+  track.addEventListener("pointermove", e => {
+    if(!isDragging) return;
+    const diff = e.clientX - startX;
+    track.style.transform = `translateX(${-currentIndex*(cards[0].offsetWidth+32)+diff}px)`;
+  });
+
+  track.addEventListener("pointerup", e => {
+    isDragging = false;
+    const diff = e.clientX - startX;
+    if(diff > 50) currentIndex = (currentIndex-1+cards.length)%cards.length;
+    if(diff < -50) currentIndex = (currentIndex+1)%cards.length;
+    track.style.transition = "transform 0.7s ease-in-out";
+    updateCarousel();
+  });
+
+  track.addEventListener("pointerleave", () => {
+    if(isDragging){
+      isDragging = false;
+      track.style.transition = "transform 0.7s ease-in-out";
+      updateCarousel();
+    }
+  });
+
+  // Initialize
+  updateCarousel();
+});
+      </script>
+
+
+<!-- ✅ JavaScript -->
+<script>
+  document.querySelectorAll(".faq-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector(".faq-icon");
+
+      if (content.style.maxHeight) {
+        // Close
+        content.style.maxHeight = null;
+        icon.textContent = "➕";
+      } else {
+        // Open
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = "➖";
+      }
+    });
+  });
+</script>
+    
+
+<script>
+  // Toggle script
+  const toggle = document.getElementById('pricing-toggle');
+  toggle.addEventListener('change', () => {
+    document.querySelectorAll('.price-monthly').forEach(el => el.classList.toggle('hidden'));
+    document.querySelectorAll('.price-annual').forEach(el => el.classList.toggle('hidden'));
+    document.querySelector('.dot').classList.toggle('translate-x-8');
+  });
+
+  // Scroll animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('opacity-100','translate-y-0');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    el.classList.add('opacity-0','translate-y-8','transition','duration-700','ease-out');
+    observer.observe(el);
+  });
+</script>
+
+
+     <script src="./js/script.js"></script>
+</body>
+</html>
+      
+
+      
