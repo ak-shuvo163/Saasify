@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Documentation — SaaSify</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;padding:28px;line-height:1.5;color:#0f172a}
+    h1,h2{color:#0b1220}
+    h1{font-size:26px;margin-bottom:8px}
+    h2{font-size:18px;margin-top:20px}
+    p,li{font-size:15px}
+    pre{background:#f3f4f6;padding:12px;border-radius:6px;overflow:auto}
+    ul{margin-left:18px}
+    code{background:#eef2ff;padding:2px 6px;border-radius:4px}
+  </style>
+</head>
+<body>
+  <h1>SaaSify — Documentation</h1>
+  <p>Concise, beginner-friendly instructions to edit and maintain this static Tailwind + HTML landing template.</p>
+
+  <h2>Introduction</h2>
+  <p>This project is a static SaaS landing page built with HTML, Tailwind CSS (precompiled to <code>css/output.css</code>), and vanilla JavaScript. Files are ready-to-serve from any static host.</p>
+
+  <h2>Folder Structure Explanation</h2>
+  <ul>
+    <li><strong>index.html</strong> — main page markup.</li>
+    <li><strong>css/output.css</strong> — compiled Tailwind stylesheet (do not edit directly if you use Tailwind source files).</li>
+    <li><strong>js/script.js</strong> — custom JavaScript (theme toggle, mobile menu, small interactions).</li>
+    <li><strong>assets/images/</strong> — images used by the template (keep names URL-friendly; avoid spaces).</li>
+    <li><strong>tailwind.config.js</strong> — Tailwind configuration (optional, if using the source build).</li>
+    <li><strong>package.json</strong> — build/dev scripts (if present).</li>
+  </ul>
+
+  <h2>How to Edit Text Content</h2>
+  <ol>
+    <li>Open <strong>index.html</strong> in a code editor.</li>
+    <li>Find the section you want to update (search for the heading text) and change the HTML content directly.</li>
+    <li>Keep accessibility attributes: preserve <code>alt</code> on images and semantic tags like <code>header</code>, <code>section</code>, <code>nav</code>, and <code>footer</code>.</li>
+    <li>For repeated strings (e.g., product name), rename consistently to avoid typos.</li>
+  </ol>
+
+  <h2>How to Change Colors (Tailwind CSS)</h2>
+  <p>There are two common workflows:</p>
+  <ul>
+    <li><strong>If you only use classes:</strong> Replace Tailwind utility classes in the markup. Example: change <code>bg-blue-600</code> to <code>bg-pink-600</code>.</li>
+    <li><strong>If you use a Tailwind build:</strong> Update <code>tailwind.config.js</code> theme colors, then rebuild the CSS. Typical commands (if project uses npm):</li>
+  </ul>
+  <pre><code>npm install
+npm run build</code></pre>
+  <p>If you don't have a build setup, it's safest to change utility classes in <strong>index.html</strong> directly and avoid editing <code>output.css</code> manually.</p>
+
+  <h2>How to Replace Images</h2>
+  <ol>
+    <li>Place optimized images inside <strong>assets/images/</strong>. Prefer WebP or optimized PNG/JPEG.</li>
+    <li>Avoid spaces or non-URL-safe characters in filenames. Use <code>kebab-case</code> (e.g., <code>logo-weather.webp</code>).</li>
+    <li>Update the <code>src</code> in <strong>index.html</strong> to point to the new filename. Example:
+      <pre><code>&lt;img src="assets/images/logo-weather.webp" alt="Company Logo" class="h-6"&gt;</code></pre>
+    </li>
+    <li>Keep or update the <code>alt</code> attribute — meaningful & concise for accessibility.</li>
+  </ol>
+
+  <h2>How to Customize Sections</h2>
+  <p>Sections are defined using semantic elements and utility classes. To change order or hide a section:</p>
+  <ul>
+    <li>Move the section's HTML block in <code>index.html</code> to reorder.</li>
+    <li>To hide on small screens, add standard Tailwind classes (for example: <code>hidden md:block</code>).</li>
+    <li>Avoid removing unique IDs (like <code>#pricing</code>, <code>#features</code>) which are referenced by anchor links and scripts.</li>
+  </ul>
+
+  <h2>JavaScript Functionality Overview</h2>
+  <p>Key behaviors and where they live:</p>
+  <ul>
+    <li><strong>Theme toggle</strong> — toggles <code>.dark</code> on the <code>&lt;html&gt;</code> element and stores preference in <code>localStorage</code>. File: <code>js/script.js</code>.</li>
+    <li><strong>Mobile menu</strong> — shows/hides the side menu by toggling classes on the element with <code>id="mobile-menu"</code>.</li>
+    <li><strong>Carousel</strong> and other small inline scripts — located in <strong>index.html</strong> near the bottom. They create dots, rotate testimonials, and implement drag/swipe. Avoid renaming referenced classes or IDs.</li>
+    <li><strong>FAQ toggles</strong> — simple show/hide toggles using max-height.</li>
+  </ul>
+  <p>If you edit JavaScript, keep safe null checks (verify elements exist with <code>document.getElementById</code>) and guard third-party calls (the template checks for libraries like <code>anime.js</code>).</p>
+
+  <h2>Deployment / Hosting Instructions</h2>
+  <p>This is a static site. Recommended quick options:</p>
+  <ul>
+    <li><strong>Local test:</strong>
+      <pre><code>cd path/to/project
+python -m http.server 8000</code></pre>
+      Then open <code>http://localhost:8000</code>.</li>
+    <li><strong>GitHub Pages:</strong> push the repository and enable Pages in settings (use the root branch).</li>
+    <li><strong>Netlify / Vercel:</strong> connect the repo; set build step only if you use Tailwind source files. For precompiled <code>output.css</code> no build is necessary.</li>
+  </ul>
+  <p>Ensure the host serves correct MIME types for <code>.webp</code> images and that files retain the same relative paths.</p>
+
+  <h2>Troubleshooting & Best Practices</h2>
+  <ul>
+    <li>Always keep backups before bulk changes.</li>
+    <li>Use URL-safe filenames for assets (no spaces).</li>
+    <li>When changing Tailwind config, rebuild CSS and verify no utilities were purged mistakenly.</li>
+    <li>Keep semantic markup and <code>alt</code> text for accessibility checks during review.</li>
+  </ul>
+
+  <footer style="margin-top:28px;font-size:13px;color:#475569">Documentation generated for maintainers — edits are safe and minimal.</footer>
+</body>
+</html>
